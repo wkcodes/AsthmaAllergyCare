@@ -1,5 +1,4 @@
-{{!< default}}
-
+{{!< default}} 
 <!--altered lines 10 and 12 to center the elements-->
 
     <div class="content-area">
@@ -10,8 +9,13 @@
                 <div class="row" style="justify-content: center;">
                     {{#foreach tags}}
                     <div class="col-md-6" style="text-align: center;">
+                        <!--Moved search under hero and above posts-->
+                        <container>
+                            {{> search}}
+                        </container>
                         <section class="topic">
-                            <header class="topic-header">
+                            <!--adding padding-->
+                            <header class="topic-header" style="padding-top: 20px";>
                                 <h2 class="topic-name">{{name}}</h2>
                                 <div class="topic-count">
                                     {{plural count.posts empty="No articles" singular="1 article" plural="%
@@ -39,12 +43,5 @@
                 </div>
             </div>
             {{/get}}
-        </main>
-    </div>
-
-    <div class="content-area" style="text-align: center;">
-        <main class="site-main">
-            <h2>Another Section</h2>
-            <p>More content can go here, similar to Dawn </p>
         </main>
     </div>
