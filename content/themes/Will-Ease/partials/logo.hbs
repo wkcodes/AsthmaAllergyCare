@@ -1,0 +1,8 @@
+<a class="logo" href="{{@site.url}}">
+    {{#if @site.logo}}
+        <img class="logo-image" src="{{@site.logo}}" alt="{{@site.title}}">
+    {{else}}
+    <!--changed font size-->
+        <span class="logo-text" style="font-size:large;">{{@site.title}}</span>
+    {{/if}}
+</a>
